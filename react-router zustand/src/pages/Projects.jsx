@@ -36,6 +36,7 @@ const Projects = () => {
           );
         })}
       </ul>
+      <Button to="/">Back to Home</Button>
     </Container>
   );
 };
