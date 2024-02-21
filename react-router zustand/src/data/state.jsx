@@ -46,8 +46,9 @@ export const useAppstore = create(
     },
     SwitchAppType: () => {
       set((state) => {
-        state.AppState.AppList[0].tpye =
+        state.AppState.AppList[0].type =
           state.AppState.AppList[0].type === Button ? Card : Button;
+
         state.AppState.AppList[0].name =
           state.AppState.AppList[0].name === "Button" ? "Card" : "Button";
       });

@@ -11,6 +11,8 @@ const Container = styled.div`
   place-content: center;
 `;
 
-export default function Card(props) {
-  return <Container {...props}></Container>;
-}
+const Card = (props) => {
+  return <Container {...props}>Card</Container>;
+};
+
+export default Card;

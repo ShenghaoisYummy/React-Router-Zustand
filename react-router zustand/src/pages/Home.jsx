@@ -26,16 +26,23 @@ const StyledLink = styled(Link)`
 
 const Home = () => {
   const theme = useSystemStore((state) => state.SystemState.theme);
-
   const switchTheme = useSystemStore((state) => state.SwitchTheme);
 
+  const AppType = useAppstore((state) => state.AppState.AppList[0].type);
+  const AppTypeName = useAppstore((state) => state.AppState.AppList[0].name);
+
+  const SwitchAppType = useAppstore((state) => state.SwitchAppType);
   return (
     <Container theme={theme}>
       <h1>Home</h1>
       <StyledLink as="div" onClick={switchTheme}>
-        {" "}
         Theme:{theme}
       </StyledLink>
+
+      <StyledLink as="div" onClick={SwitchAppType}>
+        AppTypeName:{AppTypeName}
+      </StyledLink>
+      <AppType color="Blue">TEST</AppType>
     </Container>
   );
 };
