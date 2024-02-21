@@ -35,6 +35,7 @@ const Home = () => {
   return (
     <Container theme={theme}>
       <h1>Home</h1>
+      <StyledLink to="/projects">Projects</StyledLink>
       <StyledLink as="div" onClick={switchTheme}>
         Theme:{theme}
       </StyledLink>
