@@ -1,7 +1,7 @@
 import React from "react";
 
 const NotMatch = () => {
-  return <div></div>;
+  return <div>404</div>;
 };
 
-export default 404;
+export default NotMatch;
