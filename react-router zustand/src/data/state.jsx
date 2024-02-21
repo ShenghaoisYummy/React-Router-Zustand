@@ -1,7 +1,7 @@
 import { create } from "zustand";
-import { immer } from "zustand-middleware/immer";
+import { immer } from "zustand/middleware/immer";
 
-import { cloneDeep } from "lodash";
+import { cloneDeep } from "loadsh";
 
 import Button from "../components/Card";
 import Card from "../components/Card";
@@ -48,8 +48,8 @@ export const useAppstore = create(
       set((state) => {
         state.AppState.AppList[0].tpye =
           state.AppState.AppList[0].type === Button ? Card : Button;
-          state.AppState.AppList[0].name =
-          state.AppState.AppList[0].type === Button ? Card : Button;
+        state.AppState.AppList[0].name =
+          state.AppState.AppList[0].name === "Button" ? "Card" : "Button";
       });
     },
   }))
